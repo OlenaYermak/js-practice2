@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1 — Основи JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Змінні та типи. Основи функцій.</h1>
+
+    <section>
+        <h2>Example 1 — Математичні оператори</h2>
+        <p>Виведи на екран загальну кількість яблук та винограду. Різницю яблук та винограду. Виведи на екран тип змінної apples та total  </p>
+    
+        <pre>
+            <code>const apples = 47;
+            const grapes = 135;
+            const total = ;
+            console.log(total);
+            const diff = ;
+            console.log(diff);
+            
+            console.log(typeof apples); 
+            console.log(typeof total); </code></pre>
+
+       
+    </section>
+
+    <section>
+        <h2>Example 2 — Комбіновані оператори</h2>
+        <p>Заміни вираз перевизначення комбінованим оператором +=.</p>
+        <pre>
+            <code>let students = 100;
+            students = students + 50;
+            console.log(students);</code>
+        </pre>
+    </section>
+
+    <section>
+        <h2>Example 3 — Пріоритет операторів</h2>
+        <p>Розбери пріоритет операторів в інструкції привласнення значення змінної result.</p>
+        <pre>const result = 108 + 223 - 2 * 5;</pre>
+    </section>
+
+    <section>
+        <h2>Example 4 — Клас Math</h2>
+        <p>Використовуй Math.floor(), Math.ceil() та Math.round() для різних значень.</p>
+        <pre>
+            <code>const value = 27.5;
+            const value1 = 27.3;
+            const value2 = 27.9;
+            
+            console.log(Math.floor(value));
+            console.log(Math.ceil(value));
+            console.log(Math.round(value));
+            
+            console.log(Math.floor(value1));
+            console.log(Math.ceil(value1));
+            console.log(Math.round(value1));
+            
+            
+            console.log(Math.floor(value2));
+            console.log(Math.ceil(value2));
+            console.log(Math.round(value2));</code>
+        </pre>
+    </section>
+
+    <section>
+        <h2>Example 5 — Шаблонні рядки</h2>
+        <p>Склади фразу за допомогою шаблонних рядків A has B bots in stock, де A, B - змінні вставлені в рядок.</p>
+        <pre>
+            <code>const companyName = 'Cyberdyne Systems';
+            const repairBots = 150;
+            const defenceBots = 50;
+            const message = ;
+            console.log(message); // "Cyberdyne Systems has 200 bots in stock"</code>
+        </pre>
+    </section>
+
+    <section>
+        <h2>Example 6 — Методи рядків та чейнінг</h2>
+        <p>Напиши скрипт, який розраховує індекс маси тіла людини. Для цього необхідно розділити вагу в кілограмах на квадрат
+        висоти людини у метрах.
+        
+        Вага та висота зберігаються у змінних weight та height, але не як числа, а в вигляді рядків. Не цілі числа можуть бути задані у вигляді 24.7 або 24,7, тобто як роздільник дробової частини може бути
+        кома.
+        
+        Індекс маси тіла необхідно округлити до однієї цифри після коми;
+        </p>
+        <pre>
+            <code>
+            let weight = '88,3';
+            let height = '1.75';
+            const bmi = ;
+            console.log(bmi); // 28.8</code>
+        </pre>
+    </section>
+
+    <section>
+        <h2>Example 7 — Оператори порівняння та приведення типів</h2>
+        <p>Перевір різні вирази порівняння та приведіть їх до консолі.</p>
+        <pre>
+            <code>
+            console.log(5 > 4);
+            console.log(10 >= '7'); 
+            console.log('2' > '12'); 
+            console.log('2' < '12' ); 
+            console.log('4'==4); 
+            console.log('6'===6); 
+            console.log('false'===false);
+            console.log(1==true);
+            console.log(1===true);
+            console.log('0'==false); 
+            console.log('0' === false); 
+            console.log('Papaya' < 'papaya' );
+            console.log('Papaya'==='papaya' );
+            console.log(undefined==null); 
+            console.log(undefined===null);
+</code>
+        </pre>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
