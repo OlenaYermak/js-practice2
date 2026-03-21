@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Розгалудження та цикли</h1>
+
+    <section>
+    <h2>Завдання 1 — Доступ до акаунта</h2>
+    <p>Перевір, чи користувач може отримати доступ до системи.</p>
+    <pre><code> const isLoggedIn = true;<br> const isEmailVerified = false; </code></pre>
+    <p><strong>Умова:</strong></p>
+    <ul>
+        <li>Користувач має бути залогінений</li>
+        <li>Email має бути підтверджений</li>
+    </ul>
+    <p><strong>Що зробити:</strong></p>
+    <p>Виведи в консоль:</p>
+    <ul>
+        <li><code>"Access granted"</code> — якщо обидві умови виконані</li>
+        <li><code>"Access denied"</code> — якщо ні</li>
+    </ul>
+
+
+    </section>
+
+    <section>
+        <h2>Завдання 2 — Знижка</h2> 
+        <p>Перевір, чи застосовується знижка.</p> 
+        <pre><code> const isNewUser = false; <br> const hasPromo = true; </code></pre> 
+        <p><strong>Умова:</strong></p> 
+        <ul> <li>Знижка дається, якщо користувач новий АБО має промокод</li> 
+        </ul> 
+        <p><strong>Що зробити:</strong></p> 
+        
+        <p>Виведи в консоль:</p> 
+        <ul> <li><code>"Discount applied"</code></li> 
+            <li><code>"No discount"</code></li> </ul>
+    </section>
+
+    <section>
+        <h2>Завдання 3 — Перевірка пароля</h2> 
+        <p>Оціни безпеку пароля.</p> 
+        <pre><code> const password = "qwerty123"; </code></pre> <p><strong>Умова:</strong></p> 
+        <ul> 
+            <li>Менше 8 символів → слабкий</li> 
+            <li>Містить "123" → небезпечний</li> 
+            <li>Інакше → нормальний</li> 
+        </ul> 
+        <p><strong>Що зробити:</strong></p> 
+        <p>Виведи в консоль один із варіантів:</p> 
+        <ul> 
+            <li><code>"Weak password"</code></li> 
+            <li><code>"Unsafe password"</code></li> <li><code>"Password is valid"</code></li> 
+        </ul>
+    </section>
+
+    <section>
+      <h2>Завдання 4 — Форматування імені</h2>
+      <p>Приведи ім’я до правильного формату.</p>
+      <pre>
+        <code> const name = " olena "; </code>
+    </pre> 
+    <p><strong>Що зробити:</strong></p> 
+    <ul> 
+        <li>Прибери пробіли з початку і кінця</li>
+         <li>Зроби першу літеру великою</li> 
+        </ul> 
+        <p><strong>Результат:</strong></p>
+         <pre><code> "Olena" </code></pre> 
+         <p><strong>Дія:</strong> створи нову змінну <code>formattedName</code> і виведи її в консоль</p>
+    </section>
+
+    <section>
+        <h2>Завдання 5 — Доставка</h2>
+         <p>Визнач вартість доставки.</p>
+          <pre>
+            <code> const orderAmount = 800; </code>
+        </pre> 
+        <p><strong>Умова:</strong></p> 
+        <ul> 
+            <li>Якщо сума ≥ 1000 → безкоштовно</li>
+             <li>Інакше → 100 грн</li> 
+            </ul> 
+            <p><strong>Що зробити:</strong></p>
+             <p>Виведи в консоль:</p> 
+             <ul> 
+                <li><code>"Free delivery"</code></li> <li><code>"Delivery cost: 100 UAH"</code></li> </ul>
+    </section>
+
+    <section>
+        <h2>Завдання 6 — Перевірка email</h2> 
+        <p>Перевір валідність email.</p> 
+        <pre>
+            <code> const email = "user@gmail.com"; </code>
+        </pre> 
+        <p><strong>Умова:</strong></p> 
+        <ul> 
+            <li>Має містити <code>@</code></li> 
+            <li>Має закінчуватись на <code>gmail.com</code></li> 
+        </ul> 
+        <p><strong>Що зробити:</strong></p> 
+        <p>Виведи в консоль:</p> 
+        <ul> 
+            <li><code>"Valid email"</code></li> 
+            <li><code>"Invalid email"</code></li> </ul>
+    </section>
+
+    <section>
+    <h2>Завдання 7 — Модерація коментаря</h2>
+    <p>Перевір текст коментаря.</p>
+    <pre><code> const comment = "This is stupid"; </code></pre>
+    <p><strong>Умова:</strong></p>
+    <ul>
+        <li>Якщо містить "stupid" або "hate" → блок</li>
+    </ul>
+    <p><strong>Що зробити:</strong></p>
+    <p>Виведи:</p>
+    <ul>
+        <li><code>"Comment blocked"</code></li>
+        <li><code>"Comment allowed"</code></li>
+    </ul>
+    </section>
+
+    <section>
+        <h2>Завдання 8 — Доступ за віком</h2>
+        <p>Перевір доступ користувача.</p>
+        <pre><code> const age = 17; <br>const hasID = true; </code></pre>
+        <p><strong>Умова:</strong></p>
+        <ul>
+            <li>18+ → повний доступ</li>
+            <li>16–17 + ID → обмежений</li>
+            <li>Інакше → відмова</li>
+        </ul>
+        <p><strong>Що зробити:</strong></p>
+        <p>Виведи:</p>
+        <ul>
+            <li><code>"Access granted"</code></li>
+            <li><code>"Limited access"</code></li>
+            <li><code>"Access denied"</code></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Завдання 9 — Генерація slug</h2>
+        <p>Зроби URL-friendly рядок.</p>
+        <pre><code> const title = " JavaScript for Beginners "; </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <ul>
+            <li>Прибрати пробіли</li>
+            <li>Перевести в нижній регістр</li>
+            <li>Замінити пробіли на <code>-</code></li>
+        </ul>
+        <p><strong>Результат:</strong></p>
+        <pre><code> "javascript-for-beginners" </code></pre>
+        <p><strong>Дія:</strong> створи змінну <code>slug</code> і виведи її</p>
+    </section>
+
+    <section>
+        <h2>Завдання 10 — Фінальна ціна</h2>
+        <p>Розрахуй ціну з урахуванням знижок.</p>
+        <pre><code> const price = 200; <br> const discount = 10; <br>const isMember = true; </code></pre>
+        <p><strong>Умова:</strong></p>
+        <ul>
+            <li>Якщо isMember → -10%</li>
+            <li>Якщо discount > 0 → ще мінус discount%</li>
+        </ul>
+        <p><strong>Що зробити:</strong></p>
+        <p>Виведи:</p>
+        <ul>
+            <li><code>"Final price: ___"</code></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Завдання 11 — День тижня</h2>
+        <p>Визнач тип дня.</p>
+        <pre><code> const day = "Saturday"; </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <ul>
+            <li>"Monday"–"Friday" → <code>"Working day"</code></li>
+            <li>"Saturday", "Sunday" → <code>"Weekend"</code></li>
+            <li>default → <code>"Invalid day"</code></li>
+        </ul>
+        <p><strong>Дія:</strong> використай <code>switch</code> і виведи в консоль</p>
+    </section>
+
+    <section>
+        <h2>Завдання 12 — Мова сайту</h2>
+        <p>Показати привітання залежно від мови.</p>
+        <pre><code> const lang = "ua"; </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <ul>
+            <li>"ua" → <code>"Привіт"</code></li>
+            <li>"en" → <code>"Hello"</code></li>
+            <li>"pl" → <code>"Cześć"</code></li>
+            <li>default → <code>"Unknown language"</code></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Завдання 13 — Очищення тексту</h2>
+        <p>Приведи рядок до нормального вигляду.</p>
+        <pre><code> const text = " HELLO world "; </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <ul>
+            <li>прибрати пробіли</li>
+            <li>зробити: <code>"Hello world"</code></li>
+        </ul>
+        <p><strong>Дія:</strong> створи змінну <code>result</code> і виведи її</p>
+    </section>
+
+    <section><h2>Завдання 14 — Перевірка домену</h2>
+    <p>Перевір сайт.</p>
+    <pre><code> const url = "https://my-site.com"; </code></pre>
+    <p><strong>Що зробити:</strong></p>
+    <ul>
+        <li>якщо починається з <code>https</code> → <code>"Secure"</code></li>
+        <li>інакше → <code>"Not secure"</code></li>
+    </ul></section>
+
+    <section><h2>Завдання 15 — Вирізання username</h2>
+    <p>Отримай ім’я користувача з email.</p>
+    <pre><code> const email = "olena@gmail.com"; </code></pre>
+    <p><strong>Результат:</strong></p>
+    <pre><code> "olena" </code></pre>
+    <p><strong>Підказка:</strong> <code>split()</code></p></section>
+
+    <section><h2>Завдання 16 — Цензура</h2>
+    <p>Замаскуй погані слова.</p>
+    <pre><code> const text = "This is stupid and bad"; </code></pre>
+    <p><strong>Що зробити:</strong></p>
+    <ul>
+        <li>замінити "stupid" → "***"</li>
+        <li>замінити "bad" → "***"</li>
+    </ul></section>
+
+    <section><h2>Завдання 16 — Ініціали</h2>
+    <p>Зроби ініціали з імені.</p>
+    <pre><code> const fullName = "Olena Yermak"; </code></pre>
+    <p><strong>Результат:</strong></p>
+    <pre><code> "O.Y." </code></pre></section>
+
+    <section><h2>Завдання 17 — Логін система</h2>
+    <p>Перевір доступ користувача.</p>
+    <pre><code> const username = " admin "; const password = "Admin123"; </code></pre>
+    <p><strong>Що зробити:</strong></p>
+    <ul>
+        <li>очистити username</li>
+        <li>якщо username === "admin" і пароль містить число →</li>
+    </ul>
+    <p><strong>Вивести:</strong></p>
+    <ul>
+        <li><code>"Welcome admin"</code></li>
+        <li><code>"Access denied"</code></li>
+    </ul></section>
+
+    <section><h2>Завдання 18 — Категорія товару</h2>
+    <p>Визнач знижку.</p>
+    <pre><code> const category = "electronics"; const price = 1000; </code></pre>
+    <p><strong>Умова:</strong></p>
+    <ul>
+        <li>"electronics" → -10%</li>
+        <li>"clothes" → -20%</li>
+        <li>"food" → без знижки</li>
+    </ul>
+    <p><strong>Що зробити:</strong></p>
+    <p>Використай <code>switch</code> і виведи:</p>
+    <pre><code> "Final price: ___" </code></pre></section>
+
+    <section><h2>Завдання 19 — Повідомлення користувача</h2>
+    <p>Згенеруй повідомлення.</p>
+    <pre><code> const name = " olena "; const isLoggedIn = true; </code></pre>
+    <p><strong>Що зробити:</strong></p>
+    <ul>
+        <li>очистити ім’я</li>
+        <li>зробити "Olena"</li>
+    </ul>
+    <p><strong>Вивести:</strong></p>
+    <ul>
+        <li>якщо залогінений → <code>"Hello, Olena"</code></li>
+        <li>інакше → <code>"Please log in"</code></li>
+    </ul></section>
+
+    <section>
+        <h2>Завдання 20 — Перевірка файлу</h2>
+        <p>Перевір формат файлу.</p>
+        <pre><code> const fileName = "photo.png"; </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <ul>
+            <li>якщо закінчується на ".jpg" або ".png" → <code>"Image file"</code></li>
+            <li>якщо ".pdf" → <code>"Document"</code></li>
+            <li>інакше → <code>"Unknown format"</code></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Завдання 21 — Генерація пароля</h2>
+        <p>Перевір і покращ пароль.</p>
+        <pre><code> const password = "qwerty"; </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <ul>
+            <li>якщо < 6 символів → додати "123" </li>
+            <li>зробити всі букви великими</li>
+        </ul>
+        <p><strong>Результат:</strong></p>
+        <pre><code> "QWERTY123" </code></pre>
+    </section>
+
+    <section><h2>Завдання 22 — Кошик товарів</h2>
+    <p>Розрахуй суму.</p>
+    <pre><code> const itemName = "Laptop"; const price = 500; const quantity = 2; </code></pre>
+    <p><strong>Що зробити:</strong></p>
+    <ul>
+        <li>порахувати суму</li>
+        <li>зробити назву маленькими буквами</li>
+    </ul>
+    <p><strong>Вивести:</strong></p>
+    <pre><code> "laptop x2 = 1000" </code></pre></section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
