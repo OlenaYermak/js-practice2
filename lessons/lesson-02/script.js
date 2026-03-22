@@ -183,6 +183,120 @@ console.log("Example 13 — Очищення тексту");
 
 const text = " HELLO world ";
 
-let result = text.trim().toLowerCase();
+let textTrim = text.trim().toLowerCase();
+
+let result = textTrim[0].toUpperCase() + textTrim.slice(1);
 
 console.log(result);
+
+// =************************************************************
+
+console.log("Example 14 — Перевірка домену");
+
+const url = "https://my-site.com";
+
+url.startsWith("https") ? console.log("Secure") : console.log("Not secure");
+
+// =************************************************************
+
+// console.log("Example 15 — Вирізання username");
+
+// const email2 = "olena@gmail.com";
+
+// let username = email2.split(0, 5);
+
+// console.log(username);
+
+// =************************************************************
+
+console.log("Example 16 — Цензура");
+
+const textMesage = "This is stupid and bad";
+
+let changeMessage = textMesage.replace("stupid", "***").replace("bad", "***");
+
+console.log(changeMessage);
+
+// =************************************************************
+
+console.log("Example 17 — Ініціали");
+
+const fullName = "Olena Yermak";
+
+let firstLetterName = fullName.slice(0, 1);
+let firstLettetrSurname = fullName.slice(6, 7);
+
+let initials = `${firstLetterName}.${firstLettetrSurname}.`;
+console.log(initials);
+
+// =************************************************************
+
+console.log("Example 18 — Логін система");
+
+const username = " admin ";
+const password2 = "Admin123";
+
+let usernameTrimmed = username.trim();
+
+if (usernameTrimmed === "admin" && (/\d/.test(password2))) {
+    console.log("Welcome admin");
+}
+else {
+    console.log("Access denied");
+}
+
+// =************************************************************
+
+console.log("Example 19 — Категорія товару");
+
+const category = "electronics";
+const price2 = 1000;
+
+let finalPrice;
+
+switch (category) {
+    case "electronics":
+        finalPrice = price2 * 0.9;
+        console.log(`Final price: ${finalPrice}`);
+        break;
+    
+    case "clothes":
+        finalPrice = price2 * 0.8;
+       console.log(`Final price: ${finalPrice}`);
+        break;
+    
+    case "food":
+     finalPrice = price2;
+        console.log(`Final price: ${finalPrice}`);
+        break;   
+}
+
+// =************************************************************
+
+console.log("Example 20 — Повідомлення користувача");
+
+// =************************************************************
+
+console.log("Example 21 — Перевірка файлу");
+
+const fileName = "photo.png";
+
+if (fileName.endsWith(".jpg") || fileName.endsWith(".png")) {
+    console.log("Image file");
+} else if (fileName.endsWith(".pdf")) {
+    console.log("Document");
+} else {
+    console.log("Unknown format");
+}
+
+// =************************************************************
+
+// console.log("Example 22 — Генерація пароля");
+
+// const password3 = "qwerty";
+
+// let newPsw;
+
+// if (password3.length <= 6) {
+    
+// }
