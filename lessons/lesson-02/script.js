@@ -291,12 +291,132 @@ if (fileName.endsWith(".jpg") || fileName.endsWith(".png")) {
 
 // =************************************************************
 
-// console.log("Example 22 — Генерація пароля");
+console.log("Example 22 — Генерація пароля");
 
-// const password3 = "qwerty";
+const password3 = "qwerty";
 
-// let newPsw;
+let newPsw;
 
-// if (password3.length <= 6) {
+if (password3.length <= 6) {
+    newPsw = password3.concat("123");
+} else {
+    newPsw = password3;
+}
+
+let newPswUpperCase = newPsw.toUpperCase();
+
+console.log(newPswUpperCase);
+
+
+// =************************************************************
+
+console.log("Example 23 — Кошик товарів");
+
+const itemName = "Laptop";
+const price3 = 500;
+const quantity = 2; 
+
+let itemNameLowerCase = itemName.toLocaleLowerCase();
+let totalPrice = price3 * quantity;
+
+console.log(`${itemNameLowerCase} x${quantity} = ${totalPrice}`);
+
+// =************************************************************
+
+console.log("Example 24 — Вивід чисел");
+
+//цикл for 
+for (let i = 1; i <= 5; i++){
+    console.log(i);
+}
+
+//цикл while
+let x = 0;
+while (x < 5) {
+    x++;
+    console.log(x);
+}
+
+// =************************************************************
+
+console.log("Example 25 — Парні числа");
+
+//цикл for 
+for (let i = 1; i <= 10; i++){
+    if (i % 2 === 0) {
+    console.log(i);
+}
     
-// }
+}
+
+//цикл while
+let y = 0;
+while (y < 10) {
+    y++;
+    if (y % 2 === 0) {
+    console.log(y);
+}
+}
+
+// =************************************************************
+
+console.log("Example 26 — Сума чисел");
+
+const n = 5;
+let totalNum = 0;
+
+for (let s = 0; s <= n; s++){
+    totalNum += s;
+    
+}
+
+console.log(totalNum);
+
+// =************************************************************
+
+console.log("Example 27 — Зворотний відлік");
+
+const m = 5;
+
+for (let num = m; num >= 0; num--){
+    console.log(num)
+}
+
+// =************************************************************
+
+
+/**
+ * Напиши скрипт, який підраховує суму всіх парних чисел у масиві.
+ */
+
+const numbers = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 14];
+let totals = 0;
+
+for (const num of numbers) {
+    
+    if (num % 2 === 0) {
+        totals += num;
+    }
+
+}
+
+console.log(totals);
+
+/** 
+ * Напиши скрипт, який виводить у консоль ім'я та телефонний номер користувача.
+ * У змінних names та phones зберігаються рядки імен та телефонних номерів,
+ * розділені комами. Порядковий номер імен та телефонів у рядках вказують на
+ * відповідність. Кількість імен та телефонів гарантовано однакова.
+ */
+
+const namess = "Jacob,William,Solomon,Artemis";
+const phoness = "89001234567,89001112233,890055566377,890055566300";
+
+let namesArray1 = namess.split(",");
+
+let phonesArray = phoness.split(",");
+
+for (let i = 0; i < namesArray1.length; i += 1){
+    console.log(`${i} ${namesArray1[i]} : ${phonesArray[i]}`)
+}
+console.log(namesArray1);
