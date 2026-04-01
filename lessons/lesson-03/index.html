@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1 — Основи JS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Масиви та функції.</h1>
+
+    <section>
+        <h2>Завдання 1 — Сума елементів масиву</h2>
+        <p>Обчисли суму всіх чисел.</p>
+        <pre><code> const numbers = [1, 2, 3, 4, 5]; </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <pre><code> Використовуючи цикл, порахуй суму і виведи</code></pre>
+       
+        </section>
+
+    <section>
+        <h2>Завдання 2 — Парні числа з масиву</h2>
+        <p>Знайди тільки парні числа.</p>
+        <pre><code> const numbers2 = [1, 223, 30, 4, 5, 6, 8, 22, 15, 90, 60, 53]; </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        
+        <pre><p>Створи новий масив з парними числами</p>
+            <code> [30, 4, 6, 8, 22, 90, 60] </code></pre>
+        <p><strong>Умова:</strong> використати <code>for</code></p>
+       </section>
+
+    <section>
+        <h2>Завдання 3 — Найбільше число</h2>
+        <p>Знайди максимум.</p>
+        <pre><code> const numbers3 = [5, 12, 3, 20, 8]; </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <p>Вивести:</p>
+        <pre><code> 20 </code></pre>
+        </section>
+
+    <section>
+        <h2>Завдання 4 — Реверс масиву</h2>
+        <p>Переверни масив без методу <code>reverse()</code>.</p>
+        <pre><code> const numbers4 = [1, 2, 3]; </code></pre>
+        <p><strong>Результат:</strong></p>
+        <pre><code> [3, 2, 1] </code></pre>
+       </section>
+
+    <section>
+        <h2>Завдання 5 — Підрахунок елементів</h2>
+        <p>Порахуй кількість елементів більших за 10.</p>
+        <pre><code> const numbers5 = [5, 15, 8, 20, 3]; </code></pre>
+        <p><strong>Результат:</strong></p>
+        <pre><code> 2 </code></pre>
+        </section>
+
+    <section>
+        <h2>Завдання 6 — includes</h2>
+        <p>Перевір наявність елемента.</p>
+        <pre><code> const fruits = ["apple", "banana", "orange"]; </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <p>Перевір, чи є "banana"</p>
+        <p><strong>Вивести:</strong></p>
+        <pre><code> "Found" </code></pre>
+    </section>
+
+    <section>
+        <h2>Завдання 7 — join</h2>
+        <p>Об’єднай елементи.</p>
+        <pre><code> const words = ["Hello", "world"]; </code></pre>
+        <p><strong>Результат:</strong></p>
+        <pre><code> "Hello world" </code></pre>
+    </section>
+
+    <section>
+        <h2>Завдання 8 — split</h2>
+        <p>Розбий рядок на масив.</p>
+        <pre><code> const text = "a,b,c"; </code></pre>
+        <p><strong>Результат:</strong></p>
+        <pre><code> ["a", "b", "c"] </code></pre>
+    </section>
+
+    <section>
+        <h2>Завдання 9 — Function Declaration</h2>
+        <p>Напиши функцію для суми.</p>
+        <pre><code> function sum(a, b) { } </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <p>Повернути суму двох чисел</p>
+    </section>
+
+    <section>
+        <h2>Завдання 10 — Function Expression</h2>
+        <p>Створи функцію перевірки парного числа.</p>
+        <pre><code> const isEven = function(num) { }; </code></pre>
+        <p><strong>Результат:</strong></p>
+        <p>повертає <code>true</code> або <code>false</code></p>
+    </section>
+
+    <section>
+        <h2>Завдання 11 — Параметри за замовчуванням</h2>
+        <p>Задай значення за замовчуванням.</p>
+        <pre><code> function greet(name) { } </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <ul>
+            <li>якщо name не передано → "Guest"</li>
+        </ul>
+        <p><strong>Результат:</strong></p>
+        <pre><code> "Hello, Guest" </code></pre>
+    </section>
+
+    <section>
+        <h2>Завдання 12 — arguments (псевдомасив)</h2>
+        <p>Порахуй суму всіх аргументів.</p>
+        <pre><code> function sumAll() { } </code></pre>
+        <p><strong>Приклад виклику:</strong></p>
+        <pre><code> sumAll(1, 2, 3, 4); </code></pre>
+        <p><strong>Результат:</strong></p>
+        <pre><code> 10 </code></pre>
+    </section>
+
+    <section>
+        
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
