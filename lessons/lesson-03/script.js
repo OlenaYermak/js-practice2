@@ -30,9 +30,19 @@ console.log(newArr);
 
 // =************************************************************
 
-// console.log("Example 3 — Найбільше число");
+console.log("Example 3 — Найбільше число");
 
-// const numbers3 = [5, 12, 3, 20, 8];
+const numbers3 = [5, 12, 3, 20, 8];
+
+let max = numbers3[0];
+
+for (const num of numbers3) {
+    if (num > max) {
+        max = num;
+    }
+
+    console.log(max);
+}
 
 // =************************************************************
 
@@ -132,7 +142,7 @@ console.log("Example 12 — arguments (псевдомасив)");
 
 function sumAll() {
     let arg = Array.from(arguments);
-    let total = null;
+    let total = 0;
 
     for (const a of arg) {
         total += a;
@@ -144,4 +154,32 @@ sumAll(1, 2, 3, 4);
  
 // =************************************************************
 
-console.log("Example 13 — ");
+console.log("Example 13 — Ітерація по масиву у функції");
+
+function getTotal(numbers) { 
+    let total = 0;
+    for (const num of numbers) {
+        total += num;
+    }
+    return total;
+}
+
+console.log(getTotal([1, 2, 3]));
+
+// =************************************************************
+
+console.log("Example 14 — універсальна функція");
+
+function getAverage() { 
+    let arg = Array.from(arguments);
+     let total = 0;
+    let aver = 0;
+
+    for (const a of arg) {
+        total += a;
+    }
+    aver = total / arg.length;
+    return aver;
+}
+
+console.log(getAverage(3, 6, 88, 32, 15))
