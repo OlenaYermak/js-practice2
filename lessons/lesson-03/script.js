@@ -182,4 +182,58 @@ function getAverage() {
     return aver;
 }
 
-console.log(getAverage(3, 6, 88, 32, 15))
+console.log(getAverage(3, 6, 88, 32, 15));
+
+// =************************************************************
+
+console.log("Example 15 - Колекція курсів (includes, indexOf, push і т. д.");
+
+const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL'];
+
+function addCourse(name) {
+    
+    if (courses.includes(name)) {
+        console.log("Ви вже маєте такий курс");
+        return;
+    } 
+ courses.push(name);
+   
+};
+
+console.log(addCourse('Express'));
+
+
+function removeCourse(name) {
+
+    const index = courses.indexOf(name);
+
+    if (index === -1) {
+        console.log("Курс із таким ім'ям не знайдено");
+        return;
+    }
+
+    courses.splice(index, 1);
+ };
+
+
+ console.log(removeCourse('React'));
+
+console.log(removeCourse('Vue')); 
+
+console.log(courses);
+   
+function updateCourse(oldName, newName) {
+    
+const index = courses.indexOf(oldName);
+
+    if (index === -1) {
+        console.log("Курс із таким ім'ям не знайдено");
+        return;
+    }
+
+    courses.splice(index, 1, newName); // або може бути courses[index] = newName;
+};
+
+console.log(updateCourse('Express', 'NestJS'));
+
+console.log(courses);
