@@ -237,3 +237,6 @@ const index = courses.indexOf(oldName);
 console.log(updateCourse('Express', 'NestJS'));
 
 console.log(courses);
+
+
+

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4 — Об'єкти</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Об'єкти</h1>
+
+    <section>
+        <h2>Завдання 1 — Доступ до властивостей</h2>
+        <p>Отримай значення з об’єкта.</p>
+        <pre><code> const user = { name: "Olena", age: 25, isOnline: true }; </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <p>Виведи в консоль:</p>
+        <pre><code> "Name: Olena" "Age: 25" "Online: true" </code></pre>
+    </section>
+
+    <section>
+        <h2>Завдання 2 — Додавання властивості</h2>
+        <p>Додай нове поле.</p>
+        <pre><code> const user1 = { name: "Olena" }; </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <ul>
+            <li>додай поле <code>email</code> зі значенням <code>"olena@gmail.com"</code></li>
+        </ul>
+        <p><strong>Вивести:</strong></p>
+        <pre><code> { name: "Olena", email: "olena@gmail.com" } </code></pre>
+    </section>
+
+    <section>
+        <h2>Завдання 3 — Зміна значення</h2>
+        <p>Онови дані користувача.</p>
+        <pre><code> const user2 = { name: "Olena", age: 25 }; </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <ul>
+            <li>змінити age на 26</li>
+        </ul>
+    </section>
+
+    <!-- <section>
+        <h2>Завдання 4 — Перевірка властивості</h2>
+        <p>Перевір, чи є поле.</p>
+        <pre><code> const user4 = { name: "Olena", age: 25 }; </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <ul>
+            <li>якщо є <code>email</code> → <code>"Email exists"</code></li>
+            <li>інакше → <code>"No email"</code></li>
+        </ul>
+    </section> -->
+
+    <!-- <section>
+        <h2>Завдання 5 — Видалення властивості</h2>
+        <p>Видали поле з об’єкта.</p>
+        <pre><code> const user = { name: "Olena", age: 25, password: "12345" }; </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <ul>
+            <li>видалити поле <code>password</code></li>
+        </ul>
+    </section> -->
+
+    <section> 
+        <h2>Завдання 6 — Перебір ключів</h2>
+        <p>Виведи всі ключі об’єкта.</p>
+        <pre><code> const user6 = { name: "Olena", age: 25, city: "Kyiv" }; </code></pre>
+        <p><strong>Результат:</strong></p>
+        <pre><code> name age city </code></pre>
+        <p><strong>Умова:</strong> використати <code>for...in</code></p>
+    </section>
+
+    <section>
+        <h2>Завдання 7 — Перебір значень</h2>
+        <p>Виведи всі значення.</p>
+        <pre><code> const user7 = { name: "Olena", age: 25, city: "Kyiv" }; </code></pre>
+        <p><strong>Результат:</strong></p>
+        <pre><code> Olena 25 Kyiv </code></pre>
+    </section>
+
+    <section>
+        <h2>Завдання 8 — Ключ + значення</h2>
+        <p>Зроби форматований вивід.</p>
+        <pre><code> const user8 = { name: "Olena", age: 25 }; </code></pre>
+        <p><strong>Результат:</strong></p>
+        <pre><code> name: Olena age: 25 </code></pre>
+    </section>
+
+    <section>
+        <h2>Завдання 9 — Підрахунок властивостей</h2>
+        <p>Порахуй кількість полів.</p>
+        <pre><code> const user9 = { name: "Olena", age: 25, city: "Kyiv" }; </code></pre>
+        <p><strong>Результат:</strong></p>
+        <pre><code> 3 </code></pre>
+    </section>
+
+    <!-- <section>
+        <h2>Завдання 10 — Пошук значення</h2>
+        <p>Перевір, чи є значення в об’єкті.</p>
+        <pre><code> const user10 = { name: "Olena", age: 25, city: "Kyiv" }; </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <ul>
+            <li>якщо є значення "Kyiv" → <code>"Found"</code></li>
+            <li>інакше → <code>"Not found"</code></li>
+        </ul>
+    </section> -->
+
+    <section>
+        <h2>Завдання 11 — Дані користувача</h2>
+        <p>Відфільтруй дані.</p>
+        <pre><code> const user = { name: "Olena", age: 25, password: "12345", email: "olena@gmail.com" }; </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <ul>
+            <li>вивести всі поля, КРІМ <code>password</code></li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Завдання 12 — Сума значень</h2>
+        <p>Порахуй суму чисел в об’єкті.</p>
+        <pre><code> const salaries = { John: 1000, Anna: 1500, Mike: 800 }; </code></pre>
+        <p><strong>Результат:</strong></p>
+        <pre><code> 3300 </code></pre>
+    </section>
+
+    <section>
+        <h2>Завдання 13 — Найбільше значення</h2>
+        <p>Знайди максимальну зарплату.</p>
+        <pre><code> const salaries = { John: 1000, Anna: 1500, Mike: 800 }; </code></pre>
+        <p><strong>Результат:</strong></p>
+        <pre><code> 1500 </code></pre>
+    </section>
+
+    <section>
+        <h2>Завдання 14 — Оновлення об’єкта</h2>
+        <p>Зміни значення.</p>
+        <pre><code> const product = { name: "Laptop", price: 1000 }; </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <ul>
+            <li>якщо price > 500 → зменшити на 10%</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Завдання 15 — Копія об’єкта</h2>
+        <p>Створи копію.</p>
+        <pre><code> const user = { name: "Olena", age: 25 }; </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <ul>
+            <li>створити новий об’єкт <code>newUser</code></li>
+            <li>додати поле <code>isAdmin: false</code></li>
+        </ul>
+      </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
