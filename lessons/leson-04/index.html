@@ -186,6 +186,64 @@
         </ul>
       </section>
 
+      <section>
+        <h2>Завдання 16 — Банківський акаунт (об’єкти + масиви + методи)</h2>
+        <p>Реалізуй об’єкт акаунта з історією транзакцій.</p>
+        <h3>🔹 Вхідні дані:</h3>
+        <pre><code> const Transaction = { DEPOSIT: "deposit", WITHDRAW: "withdraw", }; const account = { balance: 0, transactions: [], }; </code></pre>
+        <h3>🔹 Що зробити:</h3>
+        <p>Реалізувати наступні методи в об’єкті <code>account</code> 👇</p>
+        <h4>1. createTransaction(amount, type)</h4>
+        <p><strong>Що робить:</strong></p>
+        <ul>
+            <li>створює об’єкт транзакції</li>
+            <li>об’єкт має вигляд:</li>
+        </ul>
+        <pre><code> { id: унікальний_id, type: "deposit" або "withdraw", amount: число } </code></pre>
+        <p><strong>Повертає:</strong> об’єкт транзакції</p>
+        <h4>2. deposit(amount)</h4>
+        <p><strong>Що робить:</strong></p>
+        <ul>
+            <li>збільшує <code>balance</code></li>
+            <li>створює транзакцію через <code>createTransaction</code></li>
+            <li>додає її в <code>transactions</code></li>
+        </ul>
+        <p><strong>Результат:</strong></p>
+        <pre><code> balance збільшено транзакція додана в історію </code></pre>
+        <h4>3. withdraw(amount)</h4>
+        <p><strong>Що робить:</strong></p>
+        <ul>
+            <li>зменшує <code>balance</code></li>
+            <li>створює транзакцію</li>
+            <li>додає її в історію</li>
+        </ul>
+        <p><strong>Умова:</strong></p>
+        <ul>
+            <li>якщо <code>amount > balance</code> →</li>
+        </ul>
+        <pre><code> "Недостатньо коштів" </code></pre>
+        <h4>4. getBalance()</h4>
+        <p><strong>Що зробити:</strong></p>
+        <ul>
+            <li>повернути поточний баланс</li>
+        </ul>
+        <h4>5. getTransactionDetails(id)</h4>
+        <p><strong>Що зробити:</strong></p>
+        <ul>
+            <li>знайти транзакцію по <code>id</code></li>
+            <li>повернути об’єкт транзакції</li>
+        </ul>
+        <h4>6. getTransactionTotal(type)</h4>
+        <p><strong>Що зробити:</strong></p>
+        <ul>
+            <li>порахувати суму всіх транзакцій певного типу</li>
+        </ul>
+        <p><strong>Приклад:</strong></p>
+        <pre><code> deposit → сума всіх поповнень withdraw → сума всіх зняттів </code></pre>
+        <h3>🔹 Приклад використання:</h3>
+        <pre><code> account.deposit(1000); account.deposit(500); account.withdraw(300); console.log(account.getBalance());  console.log(account.getTransactionTotal("deposit"));  console.log(account.getTransactionTotal("withdraw")); </code></pre>
+      </section>
+
     <script src="./script.js"></script>
 </body>
 

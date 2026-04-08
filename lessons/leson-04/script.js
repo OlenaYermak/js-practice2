@@ -179,4 +179,73 @@ console.log(userLength);
 
 // =************************************************************
 
-console.log("Example 10 — Пошук значення");
+console.log("Example 16 — Банківський акаунт (об’єкти + масиви + методи");
+
+const Transaction = { DEPOSIT: "deposit", WITHDRAW: "withdraw", };
+const account = {
+  id: 0,
+  balance: 0,
+  transactions: [],
+
+  createTransaction(amount, type) {
+    this.id +=1;
+    return {id: this.id, amount, type};
+     
+  },
+
+  deposit(amount) {
+    this.balance += amount;
+   const newTransaction = this.createTransaction(amount, Transaction.DEPOSIT);
+
+    this.transactions.push(newTransaction);
+  },
+  
+  withdraw(amount) {
+    if (this.balance > amount) {
+      this.balance -= amount;
+      const newTransaction = this.createTransaction(amount, Transaction.WITHDRAW);
+      this.transactions.push(newTransaction);
+    } else console.log("Недостатньо коштів");
+  },
+  
+  getBalance() {
+    return this.balance
+  },
+
+  getTransactionDetails(id) {
+    for (const trans of this.transactions) {
+      if (trans.id === id) {
+        return trans;
+       }
+     }
+  },
+  
+  getTransactionTotal(type) {
+    let total = 0; 
+    for (const trans of this.transactions) {
+      
+      if (trans.type === type) {
+        total += trans.amount;
+      }
+      
+    }
+    return total;
+  },
+};
+
+
+console.log(account.deposit(2000));
+console.log(account.deposit(1000));
+console.log(account.deposit(200));
+console.log(account.deposit(1500));
+console.log(account);
+
+console.log(account.withdraw(1000));
+console.log(account);
+
+console.log(account.withdraw(10000));
+console.log(account);
+
+console.log(account.getBalance());
+console.log(account.getTransactionDetails(4));
+console.log(account.getTransactionTotal("deposit"));
