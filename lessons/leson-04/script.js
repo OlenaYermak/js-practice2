@@ -127,9 +127,30 @@ console.log(user2);
 
 // =************************************************************
 
-// console.log("Example 4 — Перевірка властивості");
+console.log("Example 4 — Перевірка властивості");
 
-// const user4 = { name: "Olena", age: 25 };
+const user4 = { name: "Olena", age: 25 };
+
+for (let user in user4) {
+  if (user === "email") {
+    console.log("Email exists");
+  } else {
+    console.log("No email");
+  }
+}
+
+// =************************************************************
+
+console.log("Example 5 — Видалення властивості");
+
+const user5 = { name: "Olena", age: 25, password: "12345" };
+
+for (let user in user5) {
+  console.log(user);
+  if (user === "password") { delete user5[user]; }
+  
+}
+console.log(user5);
 
 // =************************************************************
 
@@ -176,6 +197,75 @@ let userKeys = Object.keys(user9);
 let userLength = userKeys.length;
 
 console.log(userLength);
+
+// =************************************************************
+
+console.log("Example 10 — Пошук значення");
+
+const user10 = { name: "Olena", age: 25, city: "Kyiv" };
+
+let valuesUsser10 = Object.values(user10);
+valuesUsser10.includes("Kyiv") ? console.log("Found") : console.log("Not found")
+
+// =************************************************************
+
+// console.log("Example 11 — Дані користувача");
+
+// =************************************************************
+
+console.log("Example 12 — Сума значень");
+
+const salaries = { John: 1000, Anna: 1500, Mike: 800 };
+
+let valueSal = Object.values(salaries);
+let totalSal = 0;
+
+for (let val of valueSal) {
+  totalSal += val;
+}
+console.log(totalSal);
+
+// =************************************************************
+
+console.log("Example 13 — Найбільше значення");
+
+const salaries2 = { John: 1000, Anna: 1500, Mike: 800 };
+
+let valueSal2 = Object.values(salaries2);
+
+console.log(Math.max(...valueSal2));
+
+// =************************************************************
+
+console.log("Example 14 — Оновлення об’єкта");
+
+const product = { name: "Laptop", price: 1000 };
+
+// for (let prod in product) {
+//   if (prod === "price") {
+//     if (product[prod] > 500) {
+//       product[prod]=product[prod]-(product[prod]*0.1)
+//     }
+//   };
+// }
+
+///       2 variant
+if (product.price > 500) {
+  product.price *= 0.9;
+}
+
+console.log(product);
+
+
+// =************************************************************
+
+console.log("Example 15 — Копія об’єкта");
+
+const user15 = { name: "Olena", age: 25 };
+let newUser = { ...user15 };
+
+newUser.isAdmine = false;
+console.log(newUser)
 
 // =************************************************************
 
@@ -249,3 +339,130 @@ console.log(account);
 console.log(account.getBalance());
 console.log(account.getTransactionDetails(4));
 console.log(account.getTransactionTotal("deposit"));
+
+
+// =************************************************************
+
+console.log("Example 17 — Метод об'єкта");
+
+const user17 = {
+  name: "Olena",
+  age: 25,
+  getInfo() {
+    return `${this.name} is ${this.age} years old`
+  }
+};
+
+console.log(user17.getInfo());
+
+// =************************************************************
+
+console.log("Example 18 — Оновлення через метод");
+
+const user18 = {
+  name: "Olena",
+  email: "old@gmail.com",
+  changeEmail(newEmail){
+
+    this.email = newEmail;
+  },
+};
+user18.changeEmail("new@gmail.com"); 
+console.log(user18.email);
+
+// =************************************************************
+
+console.log("Example 19 — Spread (об'єднання об'єктів");
+
+const user19 = { name: "Olena", age: 25 };
+const extra = { city: "Kyiv", isOnline: true };
+
+const newUser19 = { ...user19, ...extra };
+
+console.log(newUser19);
+
+// =************************************************************
+
+console.log("Example 20 — Spread (перезапис значення)");
+
+const a = { x: 1, y: 2 };
+const b = { y: 10, z: 5 };
+
+const c = { ...a, ...b };
+
+console.log(c);
+
+// =************************************************************
+
+console.log("Example 21 — Rest (збір властивостей)");
+
+const user21 = { name: "Olena", age: 25, city: "Kyiv", };
+
+const { name, ...rest } = user21;
+
+console.log(name);
+console.log(rest);
+
+
+// =************************************************************
+
+console.log("Example 22 — Rest в функції");
+
+function sum(...numbers) {
+  let totalSum = 0;
+
+  for (let n of numbers) {
+    totalSum += n;
+   
+  }
+  return totalSum;
+}
+
+console.log(sum(1, 2, 3, 4));
+
+// =************************************************************
+
+console.log("Example 23 — Деструктуризація + метод");
+ 
+const user23 = {
+  name: "Olena",
+  age: 25,
+  getInfo() { 
+
+    const { name, age } = user23;
+    console.log(`Name: ${name}, Age: ${age}`);
+    
+  },
+};
+
+user23.getInfo();
+
+// =************************************************************
+
+console.log("Example 24 — Комбінований (spread + метод)");
+
+const user24 = {
+  name: "Olena",
+  
+  addProperty(key, value) {
+    const updatedUser = {};
+
+for (let user in user24) {
+  updatedUser[user] = user24[user];
+    }
+    
+    updatedUser[key] = value;
+
+    return updatedUser;
+  }
+  
+ };
+
+
+
+
+console.log(user24.addProperty("age", 25));
+console.log(user24.addProperty("city", "Kyiv"));
+
+console.log(user24)
+

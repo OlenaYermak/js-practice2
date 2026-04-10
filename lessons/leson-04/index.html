@@ -74,7 +74,7 @@
         </ul>
     </section>
 
-    <!-- <section>
+    <section>
         <h2>Завдання 4 — Перевірка властивості</h2>
         <p>Перевір, чи є поле.</p>
         <pre><code> const user4 = { name: "Olena", age: 25 }; </code></pre>
@@ -83,17 +83,17 @@
             <li>якщо є <code>email</code> → <code>"Email exists"</code></li>
             <li>інакше → <code>"No email"</code></li>
         </ul>
-    </section> -->
+    </section>
 
-    <!-- <section>
+    <section>
         <h2>Завдання 5 — Видалення властивості</h2>
         <p>Видали поле з об’єкта.</p>
-        <pre><code> const user = { name: "Olena", age: 25, password: "12345" }; </code></pre>
+        <pre><code> const user5 = { name: "Olena", age: 25, password: "12345" }; </code></pre>
         <p><strong>Що зробити:</strong></p>
         <ul>
             <li>видалити поле <code>password</code></li>
         </ul>
-    </section> -->
+    </section>
 
     <section> 
         <h2>Завдання 6 — Перебір ключів</h2>
@@ -128,7 +128,7 @@
         <pre><code> 3 </code></pre>
     </section>
 
-    <!-- <section>
+    <section>
         <h2>Завдання 10 — Пошук значення</h2>
         <p>Перевір, чи є значення в об’єкті.</p>
         <pre><code> const user10 = { name: "Olena", age: 25, city: "Kyiv" }; </code></pre>
@@ -137,17 +137,17 @@
             <li>якщо є значення "Kyiv" → <code>"Found"</code></li>
             <li>інакше → <code>"Not found"</code></li>
         </ul>
-    </section> -->
+    </section>
 
-    <section>
+    <!-- <section>
         <h2>Завдання 11 — Дані користувача</h2>
         <p>Відфільтруй дані.</p>
-        <pre><code> const user = { name: "Olena", age: 25, password: "12345", email: "olena@gmail.com" }; </code></pre>
+        <pre><code> const user11 = { name: "Olena", age: 25, password: "12345", email: "olena@gmail.com" }; </code></pre>
         <p><strong>Що зробити:</strong></p>
         <ul>
             <li>вивести всі поля, КРІМ <code>password</code></li>
         </ul>
-    </section>
+    </section> -->
 
     <section>
         <h2>Завдання 12 — Сума значень</h2>
@@ -160,7 +160,7 @@
     <section>
         <h2>Завдання 13 — Найбільше значення</h2>
         <p>Знайди максимальну зарплату.</p>
-        <pre><code> const salaries = { John: 1000, Anna: 1500, Mike: 800 }; </code></pre>
+        <pre><code> const salaries2 = { John: 1000, Anna: 1500, Mike: 800 }; </code></pre>
         <p><strong>Результат:</strong></p>
         <pre><code> 1500 </code></pre>
     </section>
@@ -178,7 +178,7 @@
     <section>
         <h2>Завдання 15 — Копія об’єкта</h2>
         <p>Створи копію.</p>
-        <pre><code> const user = { name: "Olena", age: 25 }; </code></pre>
+        <pre><code> const user15 = { name: "Olena", age: 25 }; </code></pre>
         <p><strong>Що зробити:</strong></p>
         <ul>
             <li>створити новий об’єкт <code>newUser</code></li>
@@ -243,6 +243,133 @@
         <h3>🔹 Приклад використання:</h3>
         <pre><code> account.deposit(1000); account.deposit(500); account.withdraw(300); console.log(account.getBalance());  console.log(account.getTransactionTotal("deposit"));  console.log(account.getTransactionTotal("withdraw")); </code></pre>
       </section>
+
+      <section>
+        <h2>Example 17 — Метод об'єкта</h2>
+        <p>Створи метод <code>getInfo()</code>, який повертає рядок з ім'ям і віком користувача.</p>
+        <pre><code> const user17 = { name: "Olena", age: 25, }; </code></pre>
+        
+        👉 Очікується:
+        
+        <pre><code> "Olena is 25 years old" </code></pre>
+        
+        👉 Вивести через:
+        
+        <pre><code> console.log(...) </code></pre>
+      </section>
+
+      <section>
+        <h2>Example 18 — Оновлення через метод</h2>
+        <p>Створи метод <code>changeEmail(newEmail)</code>, який змінює email користувача.</p>
+        <pre><code> const user18 = { name: "Olena", email: "old@gmail.com", }; </code></pre>
+        
+        👉 Після виклику:
+        
+        <pre><code> user.changeEmail("new@gmail.com"); </code></pre>
+        
+        👉 Вивести:
+        
+        <pre><code> console.log(user.email) </code></pre>
+      </section>
+
+      <section>
+    <h2>Example 19 — Spread (об'єднання об'єктів)</h2>
+    <p>Об'єднай два об'єкти в один використовуючи <code>...</code></p>
+    <pre><code> const user = { name: "Olena", age: 25 }; const extra = { city: "Kyiv", isOnline: true }; </code></pre>
+    
+    👉 Очікується:
+    
+    <pre><code> { name: "Olena", age: 25, city: "Kyiv", isOnline: true } </code></pre>
+    
+    👉 Вивести:
+    
+    <pre><code> console.log(...) </code></pre>
+      </section>
+
+      <section>
+        <h2>Example 20 — Spread (перезапис значення)</h2>
+        <p>Об'єднай об'єкти так, щоб значення з другого перезаписали перший.</p>
+        <pre><code> const a = { x: 1, y: 2 }; const b = { y: 10, z: 5 }; </code></pre>
+        
+        👉 Очікується:
+        
+        <pre><code> { x: 1, y: 10, z: 5 } </code></pre>
+        
+        👉 Вивести:
+        
+        <pre><code> console.log(...) </code></pre>
+      </section>
+
+      <section>
+        <h2>Example 21 — Rest (збір властивостей)</h2>
+        <p>Витягни <code>name</code>, а всі інші властивості збережи в окремий об'єкт через <code>...</code></p>
+        <pre><code> const user21 = { name: "Olena", age: 25, city: "Kyiv", }; </code></pre>
+        
+        👉 Очікується:
+        
+        <pre><code> name = "Olena" rest = { age: 25, city: "Kyiv" } </code></pre>
+        
+        👉 Вивести:
+        
+        <pre><code> console.log(name) console.log(rest) </code></pre>
+      </section>
+
+      <section>
+<h2>Example 22 — Rest в функції</h2>
+<p>Створи функцію <code>sum(...numbers)</code>, яка рахує суму всіх аргументів.</p>
+
+👉 Виклик:
+
+<pre><code> sum(1, 2, 3, 4) </code></pre>
+
+👉 Очікується:
+
+<pre><code> 10 </code></pre>
+
+👉 Вивести:
+
+<pre><code> console.log(...) </code></pre>
+      </section>
+
+
+      <section>
+<h2>Example 23 — Деструктуризація + метод</h2>
+<p>В середині методу використовуй деструктуризацію для доступу до властивостей.</p>
+<pre><code> const user23 = { name: "Olena", age: 25, getInfo() {}, }; </code></pre>
+
+👉 Очікується:
+
+<pre><code> "Name: Olena, Age: 25" </code></pre>
+
+👉 Вивести:
+
+<pre><code> console.log(...) </code></pre>
+      </section>
+
+      <section>
+        <h2>Example 24 — Комбінований (spread + метод)</h2>
+        <p>Створи метод <code>addProperty(key, value)</code>, який повертає новий об'єкт з доданою властивістю (не мутуючи
+            оригінал).</p>
+        <pre><code> const user24 = { name: "Olena", }; </code></pre>
+        
+        👉 Виклик:
+        
+        <pre><code> const updatedUser = user.addProperty("age", 25); </code></pre>
+        
+        👉 Очікується:
+        
+        <pre><code> updatedUser = { name: "Olena", age: 25 } </code></pre>
+        
+        👉 Вивести:
+        
+        <pre><code> console.log(updatedUser) console.log(user) // не змінений </code></pre>
+      </section>
+
+ 
+    
+    
+    
+    
 
     <script src="./script.js"></script>
 </body>
