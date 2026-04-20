@@ -1,10 +1,21 @@
 // =************************************************************
 
-// console.log("Example 1 — Callback function");
+console.log("Example 1 — Callback function");
 
-// function processUser(callback) { const user = "Olena"; }
+function processUser(callback) {
+    
+    const user = "Olena";
 
-// =************************************************************
+    callback(user);
+}
+
+function consUsername(username) {
+    console.log(`Hello ${username}`)
+}
+
+processUser(consUsername);
+
+//=************************************************************
 
 console.log("Example 2 — Arrow function");
 
@@ -97,11 +108,74 @@ const sortedNumbers10 = numbers10.toSorted((a, b) => { return a - b });
 console.log(sortedNumbers10);
 
 
+function repeatStr (n, s) {
+  return s.repeat(n);
+}
+
+console.log(repeatStr(5, "Hello"));
+
+// =************************************************************
+
+console.log("Example 11 — toSorted (об'єкти)");
+
+const users11 = [
+    { name: "Olena", age: 25 },
+    { name: "Ivan", age: 20 },
+    { name: "Anna", age: 30 }
+];
+
+const sortedByAge = users11
+    .toSorted((a, b) => a.age - b.age)
+    .map(user => user.age);
+
+console.log(sortedByAge);
+
+// =************************************************************
+
+console.log("Example 12 — callback + map");
+
+function transform(arr, callback) {
+
+return callback(arr);
+}
+
+function addTwo(array) {
+   return array.map(element => element +2)
+}
+
+console.log(transform([3, 6, 4, 12, 8], addTwo))
+
+// =************************************************************
 
 
+function areYouPlayingBanjo(name) {
+const firstLetter = name.split("");
+  
+  msg = "";
+  if(firstLetter[0] === "R" || firstLetter[0] === "r"){
+    msg = `${name} plays banjo`
+  } else {
+    msg = `${name} does not play banjo`
+  }
+  
+  return msg;
+}
 
+console.log(areYouPlayingBanjo("Robin"));
+console.log(areYouPlayingBanjo("Singh"));
+console.log(areYouPlayingBanjo("rabbit"));
 
+function makeNegative(num) {
+  if(num >0){
+    num = -num;
+  } else{ num = num}
+  
+  return num
+}
 
+console.log(makeNegative(-5))
+console.log(makeNegative(12))
+console.log(makeNegative(0))
 
 
 
