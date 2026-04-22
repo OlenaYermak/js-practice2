@@ -177,6 +177,23 @@ console.log(makeNegative(-5))
 console.log(makeNegative(12))
 console.log(makeNegative(0))
 
+function betterThanAverage(classPoints, yourPoints) {
+  let total = 0;
+  
+  
+  for(let point of classPoints){
+    total += point;
+  }
+  
+  let averagePoints = total / classPoints.length;
+  
+  return yourPoints > averagePoints ? true : false;
+}
+
+console.log(betterThanAverage([101, 45, 75, 105, 99, 107], 107));
+
+
+
 
 
 
