@@ -93,3 +93,91 @@ function descendingOrder(n){
 }
 
 console.log(descendingOrder(1234))
+
+// =************************************************************
+
+console.log("Example 8");
+
+function validatePIN(pin) {
+  return (
+    typeof pin === "string" &&
+    (pin.length === 4 || pin.length === 6) &&
+    /^\d+$/.test(pin)//перевірка що тільки цифри
+  );
+}
+
+console.log(validatePIN("1234"));
+console.log(validatePIN("12345"));
+console.log(validatePIN("a234"));
+
+// =************************************************************
+
+console.log("Example 9");
+
+function findAverage(array) {
+    if (array.length === 0) { return 0 }
+    else {
+          let total = 0;
+    for (let num of array) {
+        total += num;
+    }
+    let avarage = total / array.length;
+  return  avarage;
+    }
+
+  
+}
+
+console.log(findAverage([]))
+console.log(findAverage([2, 2, 2, 2]))
+
+// =************************************************************
+
+console.log("Example 10");
+
+function noSpace(x){
+    let strNoSpace = x.split(" ").join("");
+    return strNoSpace;
+}
+
+console.log(noSpace("8 j 8 mBliB8g imjB8B8 jl B"));
+console.log(noSpace("8 8 Bi fk8h B 8 BB8B B B B888 c hl8 BhB fd"));
+
+// =************************************************************
+
+console.log("Example 11-1");
+
+function disemvowel(str) {
+  const vowels = 'aeiou';
+  
+  return str
+    .split('')
+    .filter(char => !vowels.includes(char.toLowerCase()))
+    .join('');
+}
+
+console.log(disemvowel("No offense but,\nYour writing is among the worst I've ever read"))
+
+// =************************************************************
+
+console.log("Example 11-2");
+
+function removeVowels(str) {
+  return str.replace(/[aeiou]/gi, '');
+}
+
+console.log(removeVowels("No offense but,\nYour writing is among the worst I've ever read"))
+
+// =************************************************************
+
+console.log("Example 12");
+
+let isSquare = function (n) {
+    let sqrt = Math.sqrt(n);
+  return Number.isInteger(sqrt); 
+}
+
+console.log(isSquare(25));
+console.log(isSquare(26));
+console.log(isSquare(-1));
+console.log(isSquare(0));
