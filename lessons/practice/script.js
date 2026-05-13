@@ -181,3 +181,20 @@ console.log(isSquare(25));
 console.log(isSquare(26));
 console.log(isSquare(-1));
 console.log(isSquare(0));
+
+
+class Car {
+  constructor(brand, model, price){
+      this.brand = brand;
+      this.model = model;
+      this.price = price;
+  }
+}
+
+const audi = new Car("Audi", "Q3", 36000);
+const bmw = new Car("BMW", "X5", 58900);
+const nissan = new Car("Nissan","Murano", 31700);
+
+console.log(audi);
+console.log(bmw);
+console.log(nissan);

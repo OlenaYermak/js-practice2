@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6 — ООП. Класи</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+            background-color: #f5f5f5;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        pre {
+            background-color: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>ООП. Класи</h1>
+
+    <section>
+        <h2>Example 1 — Контекст виконання (this)</h2>
+        <p>Створи метод об'єкта, який використовує <code>this</code>.</p>
+        <pre><code> const user = { name: "Olena", showName() { } }; </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <ul>
+            <li>метод має вивести ім'я користувача через <code>this.name</code></li>
+        </ul>
+        <p><strong>Очікується:</strong></p>
+        <pre><code> Olena </code></pre>
+    </section>
+
+    <section>
+        <h2>Example 2 — Втрата контексту</h2>
+        <p>Виправ помилку втрати <code>this</code>.</p>
+        <pre><code> const user2 = { name: "Olena", showName() { console.log(this.name); } }; const fn = user2.showName; fn(); </code></pre>
+        <p><strong>Що зробити:</strong></p>
+        <ul>
+            <li>зробити так, щоб в консоль вивелось:</li>
+        </ul>
+        <pre><code> Olena </code></pre>
+        <p><strong>Умова:</strong> використати <code>bind()</code></p>
+    </section>
+
+<section>
+    <h2>Example 3 — call()</h2>
+    <p>Виклич функцію з іншим контекстом.</p>
+    <pre><code> function showCity() { console.log(this.city); } const user = { city: "Kyiv" }; </code></pre>
+    <p><strong>Що зробити:</strong></p>
+    <ul>
+        <li>викликати функцію так, щоб вивелось:</li>
+    </ul>
+    <pre><code> Kyiv </code></pre>
+    <p><strong>Умова:</strong> використати <code>call()</code></p>
+</section>
+
+<!-- <section>
+    <h2>Example 4 — apply()</h2>
+    <p>Передай аргументи через масив.</p>
+    <pre><code> function sum(a, b) { console.log(a + b); } </code></pre>
+    <p><strong>Що зробити:</strong></p>
+    <ul>
+        <li>викликати функцію через <code>apply()</code></li>
+    </ul>
+    <p><strong>Очікується:</strong></p>
+    <pre><code> 15 </code></pre>
+</section> -->
+
+<section>
+    <h2>Example 5 — Prototype</h2>
+    <p>Додай метод через prototype.</p>
+    <pre><code> function User(name) { this.name = name; } </code></pre>
+    <p><strong>Що зробити:</strong></p>
+    <ul>
+        <li>додати метод <code>sayHello()</code> через prototype</li>
+    </ul>
+    <p><strong>Очікується:</strong></p>
+    <pre><code> Hello Olena </code></pre>
+</section>
+
+<section>
+    <h2>Example 6 — Перевірка prototype</h2>
+    <p>Перевір, чи існує метод у prototype.</p>
+    <pre><code> function Car(model) { this.model = model; } Car.prototype.showModel = function() { console.log(this.model); }; </code></pre>
+    <p><strong>Що зробити:</strong></p>
+    <ul>
+        <li>створити об'єкт</li>
+        <li>викликати метод</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Example 7 — Основи OOP</h2>
+    <p>Створи клас користувача.</p>
+    <pre><code> class User2 { } </code></pre>
+    <p><strong>Що зробити:</strong></p>
+    <ul>
+        <li>додати constructor</li>
+        <li>зберігати name і age</li>
+    </ul>
+    <p><strong>Приклад:</strong></p>
+    <pre><code> const user7 = new User2("Olena", 25); </code></pre>
+</section>
+
+
+<section>
+    <h2>Example 8 — Метод класу</h2>
+    <p>Додай метод до класу.</p>
+    <pre><code> class User3 { constructor(name) { this.name = name; } } </code></pre>
+    <p><strong>Що зробити:</strong></p>
+    <ul>
+        <li>додати метод <code>getName()</code></li>
+    </ul>
+    <p><strong>Очікується:</strong></p>
+    <pre><code> Olena </code></pre>
+</section>
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
