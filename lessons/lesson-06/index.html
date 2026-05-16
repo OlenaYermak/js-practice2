@@ -140,6 +140,87 @@
     <pre><code> Olena </code></pre>
 </section>
 
+<section>
+    <h2>Example 9 — Наслідування</h2>
+    <p>Створи дочірній клас.</p>
+    <pre><code> class User9 { constructor(name) { this.name = name; } } </code></pre>
+    <p><strong>Що зробити:</strong></p>
+    <ul>
+        <li>створити клас <code>Admin</code></li>
+        <li>успадкувати від User</li>
+        <li>додати поле <code>role</code></li>
+    </ul>
+</section>
+
+<section>
+    <h2>Example 10 — super()</h2>
+    <p>Використай <code>super()</code> у дочірньому класі.</p>
+    <pre><code> class User10 { constructor(name) { this.name = name; } } </code></pre>
+    <p><strong>Що зробити:</strong></p>
+    <ul>
+        <li>в класі Admin2 викликати <code>super(name)</code></li>
+    </ul>
+</section>
+
+<section>
+    <h2>Example 11 — Приватна властивість</h2>
+    <p>Створи приватне поле.</p>
+    <pre><code> class BankAccount { } </code></pre>
+    <p><strong>Що зробити:</strong></p>
+    <ul>
+        <li>створити приватне поле <code>#balance</code></li>
+        <li>додати метод для отримання балансу</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Example 12 — Getter і Setter</h2>
+    <p>Створи getter і setter.</p>
+    <pre><code> class User12 {#email; constructor(name, email) { this.name = name; this.#email = email; } } </code></pre>
+    <p><strong>Що зробити:</strong></p>
+    <ul>
+        <li>створити getter <code>email</code></li>
+        <li>створити setter <code>email</code></li>
+    </ul>
+</section>
+
+<section>
+    <h2>Example 13 — Статичний метод</h2>
+    <p>Створи static метод.</p>
+    <pre><code> class MathHelper { } </code></pre>
+    <p><strong>Що зробити:</strong></p>
+    <ul>
+        <li>створити static метод <code>square(num)</code></li>
+    </ul>
+    <p><strong>Очікується:</strong></p>
+    <pre><code> MathHelper.square(4) → 16 </code></pre>
+</section>
+
+<section>
+    <h2>Example 14 — Реальний кейс (кошик)</h2>
+    <p>Створи клас кошика товарів.</p>
+    <pre><code> class Cart { } </code></pre>
+    <p><strong>Що зробити:</strong></p>
+    <ul>
+        <li>додати масив товарів</li>
+        <li>створити метод addProduct(product)</li>
+        <li>створити метод getTotalPrice()</li>
+    </ul>
+    <p><strong>Приклад:</strong></p>
+    <pre><code> cart.addProduct({ name: "Laptop", price: 1000 }); cart.addProduct({ name: "Phone", price: 500 }); cart.getTotalPrice(); </code></pre>
+    <p><strong>Очікується:</strong></p>
+    <pre><code> 1500 </code></pre>
+</section>
+
+<section>
+    <h2>Example 15 — Міні-челендж (this)</h2>
+    <p>Виправ код так, щоб працював контекст.</p>
+    <pre><code> const user15 = { name: "Olena", showName: () => { console.log(this.name); } }; user15.showName(); </code></pre>
+    <p><strong>Очікується:</strong></p>
+    <pre><code> Olena </code></pre>
+    <p><strong>Підказка:</strong> проблема в стрілковій функції 😈</p>
+</section>
+
 
     <script src="./script.js"></script>
 </body>
